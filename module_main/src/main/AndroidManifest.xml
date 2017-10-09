@@ -14,7 +14,7 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".launcher.LauncherActivity" />
-        <activity android:name=".guide.GuideActivity"></activity>
+        <activity android:name=".a_guide.GuideActivity"></activity>
     </application>
 
 </manifest>

@@ -15,10 +15,14 @@
         android:layout_weight="1">
 
     </FrameLayout>
+
+
     <com.zspt.app.librarybottomtablayout.BottomTabLayout
-        android:id="@+id/main_bottom_layout"
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:elevation="@dimen/elevation_normal">
 
     </com.zspt.app.librarybottomtablayout.BottomTabLayout>
 
