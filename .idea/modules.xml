@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ZSCC.iml" filepath="$PROJECT_DIR$/ZSCC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" filepath="$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_common/library_common.iml" filepath="$PROJECT_DIR$/library_common/library_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_app/module_app.iml" filepath="$PROJECT_DIR$/module_app/module_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
+    </modules>
+  </component>
+</project>
