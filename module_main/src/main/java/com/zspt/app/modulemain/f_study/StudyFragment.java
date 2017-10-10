@@ -4,7 +4,7 @@ import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 
 /**
- * Created by yuequan on 2017/10/9.
+ * Created by yuequan on 2017/10/10.
  */
 
 public class StudyFragment extends BaseMvpFragment {

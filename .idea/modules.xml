@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" filepath="$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_common/library_common.iml" filepath="$PROJECT_DIR$/library_common/library_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_app/module_app.iml" filepath="$PROJECT_DIR$/module_app/module_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_login/module_login.iml" filepath="$PROJECT_DIR$/module_login/module_login.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
     </modules>
   </component>

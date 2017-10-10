@@ -40,8 +40,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        bindLayoutId();
-
         mRootView = inflater.inflate(bindLayoutId(), container, false);
 
         initView();

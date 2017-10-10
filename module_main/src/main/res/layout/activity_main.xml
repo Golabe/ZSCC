@@ -8,13 +8,13 @@
     tools:context="com.zspt.app.modulemain.MainActivity">
 
 
-    <FrameLayout
+    <android.support.v4.view.ViewPager
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-    </FrameLayout>
+    </android.support.v4.view.ViewPager>
 
 
     <com.zspt.app.librarybottomtablayout.BottomTabLayout

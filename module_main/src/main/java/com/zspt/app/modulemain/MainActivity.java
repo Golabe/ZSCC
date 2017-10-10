@@ -3,33 +3,37 @@ package com.zspt.app.modulemain;
 
 
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+
+import android.support.v4.view.ViewPager;
 import android.widget.FrameLayout;
 
 import com.zspt.app.library_common.base.activity.BaseActivity;
 import com.zspt.app.librarybottomtablayout.BottomTabLayout;
-import com.zspt.app.modulemain.f_download.DownloadFragment;
-import com.zspt.app.modulemain.f_home.HomeFragment;
+import com.zspt.app.librarybottomtablayout.adapter.BottomTabViewPagerAdapter;
+
+import com.zspt.app.modulemain.f_course.CouresFragment;
+import com.zspt.app.modulemain.f_hot.HotFragment;
 import com.zspt.app.modulemain.f_me.MeFragment;
 import com.zspt.app.modulemain.f_study.StudyFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements BottomTabLayout.OnTabItemSelectListener {
+public class MainActivity extends BaseActivity {
 
-    private HomeFragment mHomeFragment;
+    private HotFragment mHotFragment;
     private StudyFragment mStudyFragment;
-    private DownloadFragment mDownloadFragment;
+    private CouresFragment mCouresFragment;
     private MeFragment mMeFragment;
 
     private List<BottomTabLayout.TabItemView>mTabItemViews;
     private List<Fragment>mFragments;
-    private static int lastShowFragment = 0;
+
 
 
     private BottomTabLayout mBottomTabLayout;
-    private FrameLayout mFrameLayout;
+    private ViewPager mViewPager;
+    private BottomTabViewPagerAdapter  mBottomTabViewPagerAdapter;
 
     @Override
     protected int bindLayoutId() {
@@ -38,13 +42,11 @@ public class MainActivity extends BaseActivity implements BottomTabLayout.OnTabI
 
     @Override
     protected void initView() {
-        mFrameLayout=$(R.id.main_content);
         mBottomTabLayout=$(R.id.navigation);
+        mViewPager=$(R.id.main_content);
 
-        mBottomTabLayout.setOnTabItemSelectListener(this);
 
         initFragments();
-
 
     }
 
@@ -52,27 +54,26 @@ public class MainActivity extends BaseActivity implements BottomTabLayout.OnTabI
         mTabItemViews=new ArrayList<>();
         mFragments=new ArrayList<>();
 
-        mHomeFragment=new HomeFragment();
+        mHotFragment=new HotFragment();
         mStudyFragment=new StudyFragment();
-        mDownloadFragment=new DownloadFragment();
+        mCouresFragment=new CouresFragment();
         mMeFragment=new MeFragment();
 
-        mFragments.add(mHomeFragment);
+        mFragments.add(mHotFragment);
+        mFragments.add(mCouresFragment);
         mFragments.add(mStudyFragment);
-        mFragments.add(mDownloadFragment);
         mFragments.add(mMeFragment);
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round));
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.main_content, mHomeFragment)
-                .show(mHomeFragment)
-                .commit();
+        mBottomTabViewPagerAdapter=new BottomTabViewPagerAdapter(getSupportFragmentManager(),mFragments);
+        mViewPager.setAdapter(mBottomTabViewPagerAdapter);
+
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_hot_24, R.drawable.ic_hot_checked_24));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_coures_24, R.drawable.ic_coures_checked_24));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_study_24, R.drawable.ic_study_checked_24));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_me_24, R.drawable.ic_me_checked_24));
 
         mBottomTabLayout.setTabItemViews(mTabItemViews);
+        mBottomTabLayout.setUpWithViewPager(mViewPager);
     }
 
     @Override
@@ -80,58 +81,5 @@ public class MainActivity extends BaseActivity implements BottomTabLayout.OnTabI
 
     }
 
-
-    /**
-     * Fragment 切换
-     * @param position
-     */
-
-    @Override
-    public void onTabItemSelect(int position) {
-
-        switch (position){
-            case 0:
-                if (lastShowFragment != 0) {
-                    switchFragment(lastShowFragment, 0);
-                    lastShowFragment = 0;
-                }
-                break;
-            case 1:
-                if (lastShowFragment != 1) {
-                    switchFragment(lastShowFragment, 1);
-                    lastShowFragment = 1;
-                }
-                break;
-            case 2:
-                if (lastShowFragment != 2) {
-                    switchFragment(lastShowFragment, 2);
-                    lastShowFragment = 2;
-                }
-                break;
-            case 3:
-                if (lastShowFragment != 3) {
-                    switchFragment(lastShowFragment, 3);
-                    lastShowFragment = 3;
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
-    /**
-     * 切换Fragment
-     *
-     * @param lastIndex 上个显示Fragment的索引
-     * @param index     需要显示的Fragment的索引
-     */
-    public void switchFragment(int lastIndex, int index) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.hide(mFragments.get(lastIndex));
-        if (!mFragments.get(index).isAdded()) {
-            transaction.add(R.id.main_content, mFragments.get(index));
-        }
-        transaction.show(mFragments.get(index)).commitAllowingStateLoss();
-    }
 
 }
