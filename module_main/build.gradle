@@ -25,7 +25,7 @@ android {
     sourceSets {
         main {
             if (isModule.toBoolean()) {
-                Manifest.srcFile 'src/main/module/AndroidManifest.xml'
+               // Manifest.srcFile 'src/main/module/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }
@@ -40,7 +40,7 @@ dependencies {
     compile project(':library_common')
     compile project(':library_bottomtablayout')
 
-
+    compile 'com.youth.banner:banner:1.4.10'  //最新版本
 
 
 

@@ -38,5 +38,6 @@ dependencies {
         compile project(':library_common')
     }else{
         compile project(':module_main')
+        compile project(':module_course_details')
     }
 }

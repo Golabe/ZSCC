@@ -5,7 +5,6 @@ package com.zspt.app.modulemain;
 import android.support.v4.app.Fragment;
 
 import android.support.v4.view.ViewPager;
-import android.widget.FrameLayout;
 
 import com.zspt.app.library_common.base.activity.BaseActivity;
 import com.zspt.app.librarybottomtablayout.BottomTabLayout;
@@ -67,10 +66,10 @@ public class MainActivity extends BaseActivity {
         mBottomTabViewPagerAdapter=new BottomTabViewPagerAdapter(getSupportFragmentManager(),mFragments);
         mViewPager.setAdapter(mBottomTabViewPagerAdapter);
 
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_hot_24, R.drawable.ic_hot_checked_24));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_coures_24, R.drawable.ic_coures_checked_24));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_study_24, R.drawable.ic_study_checked_24));
-        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_me_24, R.drawable.ic_me_checked_24));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_hot_48, R.drawable.ic_hot_checked_48));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_coures_48, R.drawable.ic_coures_checked_48));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_study_48, R.drawable.ic_study_checked_48));
+        mTabItemViews.add(new BottomTabLayout.TabItemView(this, R.drawable.ic_me_48, R.drawable.ic_me_checked_48));
 
         mBottomTabLayout.setTabItemViews(mTabItemViews);
         mBottomTabLayout.setUpWithViewPager(mViewPager);
