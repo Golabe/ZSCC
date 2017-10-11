@@ -41,6 +41,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        setSwipeBackEnable(false);
         mBottomTabLayout=$(R.id.navigation);
         mViewPager=$(R.id.main_content);
 

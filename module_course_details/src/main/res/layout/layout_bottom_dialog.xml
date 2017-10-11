@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_question"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_question_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="提问"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_check_in"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_check_in_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="签到"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_homework"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_homework_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="17dp"
+                    android:gravity="center"
+                    android:text="作业"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_vote"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_vote_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="投票"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_brainstorming"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_brainstorming_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="头脑风暴"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/details_watch_download"
+                    android:layout_width="@dimen/bottom_dialog_icon_size"
+                    android:layout_height="@dimen/bottom_dialog_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_download_64" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="下载"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

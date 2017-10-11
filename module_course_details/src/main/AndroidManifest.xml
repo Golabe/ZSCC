@@ -4,7 +4,7 @@
 
     <application android:theme="@style/Base.AppTheme">
         <activity
-            android:name=".CourseDetailsActivity"
+            android:name=".course_details.CourseDetailsActivity"
             >
         </activity>
     </application>

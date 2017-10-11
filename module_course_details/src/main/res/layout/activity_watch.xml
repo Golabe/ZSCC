@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zspt.app.modulecouresdetails.course_watch.WatchActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:src="@drawable/ic_back2_48"
+        android:layout_margin="@dimen/margin"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/details_watch_fab"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/ic_add_48"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size" />
+
+</FrameLayout>

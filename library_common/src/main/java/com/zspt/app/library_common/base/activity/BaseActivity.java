@@ -5,18 +5,20 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+
+import com.zspt.app.libraryswipebacklayout.SwipeBackLayout;
+import com.zspt.app.libraryswipebacklayout.app.SwipeBackActivity;
 
 
 /**
  * Created by yuequan on 2017/10/8.
  */
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends SwipeBackActivity {
 
-
+private SwipeBackLayout mSwipeBackActivity;
     protected Context mContext;
 
     /**
@@ -42,6 +44,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(bindLayoutId());
         mContext = this;
+        mSwipeBackActivity=getSwipeBackLayout();
+        mSwipeBackActivity.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//5.0 全透明状态栏
             View decorView = getWindow().getDecorView();

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ZSCC.iml" filepath="$PROJECT_DIR$/ZSCC.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" filepath="$PROJECT_DIR$/library_bottomtablayout/library_bottomtablayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_common/library_common.iml" filepath="$PROJECT_DIR$/library_common/library_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_swipebacklayout/library_swipebacklayout.iml" filepath="$PROJECT_DIR$/library_swipebacklayout/library_swipebacklayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_app/module_app.iml" filepath="$PROJECT_DIR$/module_app/module_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_course_details/module_course_details.iml" filepath="$PROJECT_DIR$/module_course_details/module_course_details.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_login/module_login.iml" filepath="$PROJECT_DIR$/module_login/module_login.iml" />
