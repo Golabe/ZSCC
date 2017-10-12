@@ -40,9 +40,7 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
         mCoursePresenter = new CoursePresenter(this);
         mCoursePresenter.getHeaderList();
         mCoursePresenter.getNewList();
-
         addPresenter(mCoursePresenter);
-
     }
 
     @Override
@@ -109,7 +107,9 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
      */
     @Override
     public void onError() {
-
+        if (mRefreshLayout.isRefreshing()) {
+            mRefreshLayout.setRefreshing(false);
+        }
     }
 
     /**
@@ -126,10 +126,11 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
                 mTempPageCount++;
             }
         } else {
-            Log.d(TAG, "onSuccess: " + data.get(1).getLevel());
 
             mCourseNewAdapter.bindNewData(data);
-            mRefreshLayout.setRefreshing(false);
+            if (mRefreshLayout.isRefreshing()) {
+                mRefreshLayout.setRefreshing(false);
+            }
         }
 
     }

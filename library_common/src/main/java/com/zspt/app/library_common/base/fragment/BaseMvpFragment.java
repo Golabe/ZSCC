@@ -49,12 +49,6 @@ public abstract class BaseMvpFragment extends BaseFragment {
     }
 
 
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        fetchData();
-//    }
-
     protected void addPresenter(BasePresenter presenter) {
         mPresenters.add(presenter);
     }

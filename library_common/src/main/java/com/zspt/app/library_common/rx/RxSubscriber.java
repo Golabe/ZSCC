@@ -1,6 +1,7 @@
 package com.zspt.app.library_common.rx;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.zspt.app.library_common.app.BaseApplication;
 
@@ -13,7 +14,7 @@ import rx.Subscriber;
  */
 
 public abstract class RxSubscriber<T> extends Subscriber<T> {
-
+    private static final String TAG = "RxSubscriber";
     private Context mContext;
 
     private boolean mIsLoading;//是否显示加载
@@ -30,7 +31,7 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
 
     @Override
     public void onError(Throwable e) {
-
+        Log.d(TAG, "onError: "+e.toString());
         //处理请求异常
         if (e instanceof IOException) {
             //网络连接异常
@@ -38,7 +39,7 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
 
         }
 
-        _onError();
+        _onError(e);
         onHideLoading();
     }
 
@@ -72,5 +73,5 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
 
     protected abstract void _onNext(T t);
 
-    protected abstract void _onError();
+    protected abstract void _onError(Throwable e);
 }

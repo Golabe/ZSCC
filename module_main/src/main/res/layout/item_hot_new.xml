@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="实战推荐"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/item_hot_image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/item_hot_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="Python"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/item_hot_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_hot_type1"
+                android:layout_marginLeft="10dp"
+                android:maxLength="10"
+                android:text="Python进阶"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_hot_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="435人"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/item_hot_image2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_red_dark" />
+
+            <TextView
+                android:id="@+id/item_hot_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:text="Python"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/item_hot_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_hot_type2"
+                android:layout_marginLeft="10dp"
+                android:maxLength="10"
+                android:text="Python进阶"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_hot_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/dp_10"
+                android:text="435人"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_hot_image3"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/item_hot_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/item_hot_level1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_hot_count3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_hot_image4"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/item_hot_name4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/item_hot_level2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/item_hot_count4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="10dp">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/item_hot_image5"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/item_hot_name5"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:maxLength="20"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@android:color/black"-->
+                <!--android:textSize="18sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/item_hot_level3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:textColor="@android:color/darker_gray"-->
+                <!--android:textSize="@dimen/sp_12" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/item_hot_count5"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:textColor="@android:color/darker_gray" />-->
+        <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

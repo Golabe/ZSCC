@@ -1,7 +1,10 @@
 package com.zspt.app.library_common.rx;
 
+
 import com.zspt.app.library_common.base.model.HttpResult;
 import com.zspt.app.library_common.net.ApiException;
+
+
 
 import rx.Observable;
 import rx.Subscriber;
@@ -19,6 +22,8 @@ public class RxManager {
     private RxManager() {
     }
 
+
+
     private static class SingletonHolder {
         private static final RxManager INSTANCE = new RxManager();
     }
@@ -35,17 +40,15 @@ public class RxManager {
                 .subscribe(subscriber);
     }
 
-    public <T> Subscription doSubscription1(Observable<HttpResult<T>> observable, Subscriber<T> subscriber) {
-
+    public <T> Subscription doSubscribe1(Observable<HttpResult<T>> observable, Subscriber<T> subscriber) {
         return observable
                 .map(new Func1<HttpResult<T>, T>() {
-
                     @Override
-                    public T call(HttpResult<T> tHttpResult) {
-                        if (tHttpResult.isError()){
+                    public T call(HttpResult<T> httpResult) {
+                        if (httpResult.isError()) {
                             throw new ApiException();
                         }
-                        return tHttpResult.getResult();
+                        return httpResult.getResult();
                     }
                 })
                 .subscribeOn(Schedulers.io())

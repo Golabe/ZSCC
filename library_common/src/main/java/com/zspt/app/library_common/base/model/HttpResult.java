@@ -8,7 +8,6 @@ public class HttpResult <T> {
     private boolean error;
     private int code;
     private String message;
-
     private T result;
 
 
