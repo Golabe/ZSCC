@@ -4,8 +4,9 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:text="3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+  <Button
+      android:id="@+id/me_arouter"
+      android:text="ARouter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
 </LinearLayout>

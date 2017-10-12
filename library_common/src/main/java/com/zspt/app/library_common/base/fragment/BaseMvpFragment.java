@@ -21,44 +21,39 @@ public abstract class BaseMvpFragment extends BaseFragment {
 
     protected abstract void fetchData();
 
-    protected abstract int bindLayoutId();
 
-    protected abstract void initView();
-
-    protected abstract void initData();
-
-//    protected boolean mIsViewInitiated;
-//    protected boolean mIsVisibleToUser;
-//    protected boolean mIsDataInitiated;
-//
-//    @Override
-//    public void setUserVisibleHint(boolean isVisibleToUser) {
-//        super.setUserVisibleHint(isVisibleToUser);
-//        mIsVisibleToUser = isVisibleToUser;
-//        initFetchData();
-//    }
-//
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//
-//        mIsViewInitiated = true;
-//        initFetchData();
-//    }
-//
-//    protected void initFetchData() {
-//        if (mIsVisibleToUser && mIsViewInitiated && !mIsDataInitiated) {
-//            fetchData();
-//            mIsDataInitiated = true;
-//        }
-//    }
-
+    protected boolean mIsViewInitiated;
+    protected boolean mIsVisibleToUser;
+    protected boolean mIsDataInitiated;
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        fetchData();
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        mIsVisibleToUser = isVisibleToUser;
+        initFetchData();
     }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        mIsViewInitiated = true;
+        initFetchData();
+    }
+
+    protected void initFetchData() {
+        if (mIsVisibleToUser && mIsViewInitiated && !mIsDataInitiated) {
+            fetchData();
+            mIsDataInitiated = true;
+        }
+    }
+
+
+//    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//        fetchData();
+//    }
 
     protected void addPresenter(BasePresenter presenter) {
         mPresenters.add(presenter);

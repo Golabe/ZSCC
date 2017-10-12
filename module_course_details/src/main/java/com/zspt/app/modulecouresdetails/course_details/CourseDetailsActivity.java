@@ -9,10 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.view.activity.WatchActivity;
 
+
+@Route(path = "/ModuleCourseDetails/CourseDetailsActivity")
 public class CourseDetailsActivity extends BaseMvpActivity implements View.OnClickListener {
 
     private Button mStartStudy;

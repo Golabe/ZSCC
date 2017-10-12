@@ -13,7 +13,7 @@ import com.zspt.app.librarybottomtablayout.adapter.BottomTabViewPagerAdapter;
 import com.zspt.app.modulemain.f_course.view.CourseFragment;
 import com.zspt.app.modulemain.f_hot.view.HotFragment;
 import com.zspt.app.modulemain.f_me.MeFragment;
-import com.zspt.app.modulemain.f_study.StudyFragment;
+import com.zspt.app.modulemain.f_study.view.StudyFragment;
 
 import java.util.ArrayList;
 import java.util.List;

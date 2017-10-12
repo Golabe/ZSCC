@@ -15,11 +15,13 @@ import java.util.List;
  * Created by yuequan on 2017/10/11.
  */
 
-public class CourseNewAdapter<T> extends BaseQuickAdapter<CourseNewModel,BaseViewHolder> {
+public class CourseNewAdapter extends BaseQuickAdapter<CourseNewModel,BaseViewHolder> {
+    private List<CourseNewModel>mData;
     private static final String TAG = "CourseNewAdapter";
 
     public CourseNewAdapter(@LayoutRes int layoutResId, @Nullable List<CourseNewModel> data) {
         super(layoutResId, data);
+        this.mData=data;
     }
 
     @Override
@@ -30,9 +32,10 @@ public class CourseNewAdapter<T> extends BaseQuickAdapter<CourseNewModel,BaseVie
                 .setText(R.id.item_course_new_level,item.getLevel())
                 .setImageResource(R.id.item_course_new_image,item.getImageUrl());
     }
-    public void addNewData(List<T>data){
-        data.clear();
-        data.addAll(data);
+    public void bindNewData(List<CourseNewModel>data){
+        Log.d(TAG, "addNewData: "+data.get(1).getLevel());
+        mData.clear();
+        mData.addAll(data);
         notifyDataSetChanged();
     }
 }

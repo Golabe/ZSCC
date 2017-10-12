@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/module_course_details/module_course_details.iml" filepath="$PROJECT_DIR$/module_course_details/module_course_details.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_login/module_login.iml" filepath="$PROJECT_DIR$/module_login/module_login.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_main/module_main.iml" filepath="$PROJECT_DIR$/module_main/module_main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_search/module_search.iml" filepath="$PROJECT_DIR$/module_search/module_search.iml" />
     </modules>
   </component>
 </project>

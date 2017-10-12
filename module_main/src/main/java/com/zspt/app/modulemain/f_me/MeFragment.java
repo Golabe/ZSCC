@@ -1,5 +1,9 @@
 package com.zspt.app.modulemain.f_me;
 
+import android.view.View;
+import android.widget.Button;
+
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 
@@ -8,6 +12,7 @@ import com.zspt.app.modulemain.R;
  */
 
 public class MeFragment extends BaseMvpFragment {
+    private Button mButton;
     @Override
     protected void fetchData() {
 
@@ -20,6 +25,14 @@ public class MeFragment extends BaseMvpFragment {
 
     @Override
     protected void initView() {
+        mButton=$(R.id.me_arouter);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+
+            }
+        });
 
     }
 

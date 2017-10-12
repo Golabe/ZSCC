@@ -1,6 +1,7 @@
 package com.zspt.app.modulemain.f_course.view;
 
 import com.zspt.app.library_common.base.mvp.IBaseView;
+import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;
 import com.zspt.app.modulemain.f_course.model.CourseNewModel;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface ICourseView extends IBaseView {
 
 
     void onSuccess(List<CourseNewModel>data);
+
+    void bindHeaderList(List<CourseHeaderModel>data);
 }

@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.zspt.app.library_common.base.mvp.BasePresenter;
 import com.zspt.app.modulemain.R;
+import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;
 import com.zspt.app.modulemain.f_course.model.CourseNewModel;
 import com.zspt.app.modulemain.f_course.view.ICourseView;
 
@@ -17,6 +18,20 @@ import java.util.List;
 public class CoursePresenter extends BasePresenter<ICourseView> {
     private static final String TAG = "CoursePresenter";
 
+    private int mCourseHeaderImageId[] = {
+            R.drawable.bg_web_page_64,
+            R.drawable.bg_bg_64,
+            R.drawable.bg_phone_64,
+            R.drawable.bg_sql_64,
+            R.drawable.bg_yun_64,
+            R.drawable.bg_ui_64,};
+    private String mCourseHeaderType[] = {
+            "前端开发",
+            "后端开发",
+            "移动开发",
+            "数据库",
+            "云计算",
+            "UI设计"};
     private String name[] = {
             "Rx_java",
             "Rx_android",
@@ -80,6 +95,17 @@ public class CoursePresenter extends BasePresenter<ICourseView> {
         }
         Log.d(TAG, "getNewList: "+mList.get(1).getLevel());
         mView.onSuccess(mList);
+
+    }
+
+    public void getHeaderList(){
+
+       List<CourseHeaderModel> mHeaderData = new ArrayList<>();
+        for (int i = 0; i < mCourseHeaderImageId.length; i++) {
+            mHeaderData.add(new CourseHeaderModel(mCourseHeaderImageId[i], mCourseHeaderType[i]));
+        }
+
+        mView.bindHeaderList(mHeaderData);
 
     }
 
