@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".course_watch.WatchActivity"></activity>
+        <activity
+            android:name=".course_watch.view.activity.WatchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".course_watch.view.activity.QuestionActivity"></activity>
     </application>
 
 </manifest>

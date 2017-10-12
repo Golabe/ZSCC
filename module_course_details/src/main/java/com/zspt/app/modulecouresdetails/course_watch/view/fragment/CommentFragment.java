@@ -1,13 +1,13 @@
-package com.zspt.app.modulemain.f_course;
+package com.zspt.app.modulecouresdetails.course_watch.view.fragment;
 
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
-import com.zspt.app.modulemain.R;
+import com.zspt.app.modulecouresdetails.R;
 
 /**
- * Created by yuequan on 2017/10/10.
+ * Created by yuequan on 2017/10/11.
  */
 
-public class CouresFragment extends BaseMvpFragment {
+public class CommentFragment extends BaseMvpFragment {
     @Override
     protected void fetchData() {
 
@@ -15,7 +15,7 @@ public class CouresFragment extends BaseMvpFragment {
 
     @Override
     protected int bindLayoutId() {
-        return R.layout.fragment_course;
+        return R.layout.fragment_comment;
     }
 
     @Override

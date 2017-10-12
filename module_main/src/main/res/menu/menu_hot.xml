@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/main_menu_scan"
+        android:id="@+id/main_menu_hot_scan"
         android:icon="@drawable/ic_scan_48"
         android:title="@string/scan"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/main_menu_search"
+        android:id="@+id/main_menu_hot_search"
         android:icon="@drawable/ic_search_48"
         android:title="@string/search"
         app:showAsAction="ifRoom" />

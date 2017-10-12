@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zspt.app.modulecouresdetails.course_watch.WatchActivity">
+    tools:context="com.zspt.app.modulecouresdetails.course_watch.view.activity.WatchActivity">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation_normal"
+        android:orientation="vertical">
+
+
+        <com.devlin_n.videoplayer.player.IjkVideoView
+            android:id="@+id/details_watch_player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/details_watch_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height">
+
+        </android.support.design.widget.TabLayout>
 
     </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/details_watch_view_pager"
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 
-    <ImageView
-        android:src="@drawable/ic_back2_48"
-        android:layout_margin="@dimen/margin"
-        android:layout_width="@dimen/icon_size"
-        android:layout_height="@dimen/icon_size" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/details_watch_fab"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="bottom|right"
-        android:src="@drawable/ic_add_48"
         android:layout_width="@dimen/fab_size"
-        android:layout_height="@dimen/fab_size" />
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_48" />
 
-</FrameLayout>
+</RelativeLayout>

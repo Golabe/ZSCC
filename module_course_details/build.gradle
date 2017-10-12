@@ -38,8 +38,8 @@ android {
 }
 
 dependencies {
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':library_common')
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.DevlinChiu:dcplayer:1.3'
 }

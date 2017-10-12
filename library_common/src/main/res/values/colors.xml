@@ -3,12 +3,12 @@
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="colorGray">#f4f5f7</color>
 
     <!--TabLayout-->
     <color name="tabTextColor">#464545</color>
     <color name="tabSelectedTextColor">#000000</color>
-    <color name="tabIndicatorColor">#f10d1c</color>
+    <color name="tabIndicatorColor">#f01414</color>
 
 
 </resources>

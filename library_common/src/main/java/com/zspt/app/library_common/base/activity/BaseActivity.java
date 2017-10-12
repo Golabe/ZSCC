@@ -44,6 +44,7 @@ private SwipeBackLayout mSwipeBackActivity;
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(bindLayoutId());
         mContext = this;
+
         mSwipeBackActivity=getSwipeBackLayout();
         mSwipeBackActivity.setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
 
@@ -62,6 +63,7 @@ private SwipeBackLayout mSwipeBackActivity;
         initView();
         initData();
     }
+
 
     @Override
     protected void onDestroy() {

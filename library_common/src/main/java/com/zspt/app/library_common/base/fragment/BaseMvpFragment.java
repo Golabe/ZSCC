@@ -2,6 +2,7 @@ package com.zspt.app.library_common.base.fragment;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import com.zspt.app.library_common.base.mvp.BasePresenter;
 
@@ -25,30 +26,38 @@ public abstract class BaseMvpFragment extends BaseFragment {
     protected abstract void initView();
 
     protected abstract void initData();
-    protected boolean mIsViewInitiated;
-    protected boolean mIsVisibleToUser;
-    protected boolean mIsDataInitiated;
+
+//    protected boolean mIsViewInitiated;
+//    protected boolean mIsVisibleToUser;
+//    protected boolean mIsDataInitiated;
+//
+//    @Override
+//    public void setUserVisibleHint(boolean isVisibleToUser) {
+//        super.setUserVisibleHint(isVisibleToUser);
+//        mIsVisibleToUser = isVisibleToUser;
+//        initFetchData();
+//    }
+//
+//    @Override
+//    public void onActivityCreated(Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//
+//        mIsViewInitiated = true;
+//        initFetchData();
+//    }
+//
+//    protected void initFetchData() {
+//        if (mIsVisibleToUser && mIsViewInitiated && !mIsDataInitiated) {
+//            fetchData();
+//            mIsDataInitiated = true;
+//        }
+//    }
+
 
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        mIsVisibleToUser = isVisibleToUser;
-        initFetchData();
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        mIsViewInitiated = true;
-        initFetchData();
-    }
-
-    protected void initFetchData() {
-        if (mIsVisibleToUser && mIsViewInitiated && !mIsDataInitiated) {
-            fetchData();
-            mIsDataInitiated = true;
-        }
+        fetchData();
     }
 
     protected void addPresenter(BasePresenter presenter) {

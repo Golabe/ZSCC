@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
-import com.zspt.app.modulecouresdetails.course_watch.WatchActivity;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.WatchActivity;
 
 public class CourseDetailsActivity extends BaseMvpActivity implements View.OnClickListener {
 
@@ -72,14 +72,12 @@ public class CourseDetailsActivity extends BaseMvpActivity implements View.OnCli
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.details_start_study:
+        int i = view.getId();
+        if (i == R.id.details_start_study) {
+            startActivity(new Intent(CourseDetailsActivity.this, WatchActivity.class));
 
-                startActivity(new Intent(CourseDetailsActivity.this, WatchActivity.class));
 
-                break;
-            default:
-                break;
+        } else {
         }
     }
 }
