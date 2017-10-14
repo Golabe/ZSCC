@@ -10,7 +10,7 @@ import com.zspt.app.library_common.base.activity.BaseActivity;
 import com.zspt.app.librarybottomtablayout.BottomTabLayout;
 import com.zspt.app.librarybottomtablayout.adapter.BottomTabViewPagerAdapter;
 
-import com.zspt.app.modulemain.f_course.view.CourseFragment;
+import com.zspt.app.modulemain.f_course.view.fragment.CourseFragment;
 import com.zspt.app.modulemain.f_hot.view.HotFragment;
 import com.zspt.app.modulemain.f_me.MeFragment;
 import com.zspt.app.modulemain.f_study.view.StudyFragment;

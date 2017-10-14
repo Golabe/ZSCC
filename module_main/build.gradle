@@ -29,7 +29,7 @@ android {
     sourceSets {
         main {
             if (isModule.toBoolean()) {
-                Manifest.srcFile 'src/main/module/AndroidManifest.xml'
+              //  Manifest.srcFile 'src/main/module/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             }

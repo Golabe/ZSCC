@@ -15,5 +15,5 @@ public interface ICourseView extends IBaseView {
 
     void onSuccess(List<CourseNewModel>data);
 
-    void bindHeaderList(List<CourseHeaderModel>data);
+    void bindHeaderData(List<CourseHeaderModel>data);
 }

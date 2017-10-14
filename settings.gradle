@@ -1,1 +1,1 @@
-include ':module_app', ':library_common', ':module_main', ':library_bottomtablayout', ':module_login', ':module_course_details', ':library_swipebacklayout', ':module_search'
+include ':module_app', ':library_common', ':module_main', ':library_bottomtablayout', ':module_login', ':module_course_details', ':library_swipebacklayout', ':module_search', ':module_scan'

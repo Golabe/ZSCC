@@ -2,6 +2,8 @@ package com.zspt.app.modulemain.adapter;
 
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.view.View;
 
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -30,7 +32,14 @@ public class HotAdapter extends BaseQuickAdapter<HotModel, BaseViewHolder> {
         helper.setText(R.id.item_hot_name1, item.getName1())
                 .setText(R.id.item_hot_name2, item.getName2())
                 .setText(R.id.item_hot_name3, item.getName3())
-                .setText(R.id.item_hot_name4, item.getName4());
+                .setText(R.id.item_hot_name4, item.getName4())
+                .addOnClickListener(R.id.item_hot_layout1)
+                .addOnClickListener(R.id.item_hot_layout2)
+                .addOnClickListener(R.id.item_hot_layout3)
+                .addOnClickListener(R.id.item_hot_layout4);
+
+
+
     }
 
     public void bindNewData(List<HotModel> data) {
@@ -39,4 +48,5 @@ public class HotAdapter extends BaseQuickAdapter<HotModel, BaseViewHolder> {
         notifyDataSetChanged();
 
     }
+
 }

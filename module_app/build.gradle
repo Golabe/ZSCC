@@ -41,5 +41,6 @@ dependencies {
         compile project(':module_main')
         compile project(':module_course_details')
         compile project(':module_search')
+        compile project(':module_scan')
     }
 }

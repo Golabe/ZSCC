@@ -34,7 +34,7 @@ public class NetManager {
                 .client(getOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .baseUrl(getBaseUrl(service))
+                .baseUrl("https://500px.me/community/discover//")
                 .build();
         return retrofit.create(service);
     }

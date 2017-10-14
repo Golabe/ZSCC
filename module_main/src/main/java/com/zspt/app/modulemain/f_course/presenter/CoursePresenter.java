@@ -105,7 +105,7 @@ public class CoursePresenter extends BasePresenter<ICourseView> {
             mHeaderData.add(new CourseHeaderModel(mCourseHeaderImageId[i], mCourseHeaderType[i]));
         }
 
-        mView.bindHeaderList(mHeaderData);
+        mView.bindHeaderData(mHeaderData);
 
     }
 

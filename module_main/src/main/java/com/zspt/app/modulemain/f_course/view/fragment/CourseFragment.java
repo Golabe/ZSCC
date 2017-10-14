@@ -1,4 +1,4 @@
-package com.zspt.app.modulemain.f_course.view;
+package com.zspt.app.modulemain.f_course.view.fragment;
 
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +15,7 @@ import com.zspt.app.modulemain.adapter.CourseNewAdapter;
 import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;
 import com.zspt.app.modulemain.f_course.model.CourseNewModel;
 import com.zspt.app.modulemain.f_course.presenter.CoursePresenter;
+import com.zspt.app.modulemain.f_course.view.ICourseView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +69,7 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
         mCourseNewAdapter = new CourseNewAdapter(R.layout.item_course_new, new ArrayList<CourseNewModel>());
 
         mCourseNewAdapter.setOnItemClickListener(this);
-
+       // mCourseNewAdapter.setEmptyView(R.layout.layout_recycler_loading);
         mCourseNewAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
             @Override
             public void onLoadMoreRequested() {
@@ -141,7 +142,7 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
      * @param data
      */
     @Override
-    public void bindHeaderList(List<CourseHeaderModel> data) {
+    public void bindHeaderData(List<CourseHeaderModel> data) {
         if (data.size() == 0) {
 
         } else {

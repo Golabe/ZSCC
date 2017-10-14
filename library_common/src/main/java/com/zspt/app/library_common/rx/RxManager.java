@@ -33,7 +33,7 @@ public class RxManager {
     }
 
 
-    public <T> Subscription doSubscription(Observable<T> observable, Subscriber<T> subscriber) {
+    public <T> Subscription doSubscribe(Observable<T> observable, Subscriber<T> subscriber) {
         return observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -55,5 +55,4 @@ public class RxManager {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber);
     }
-
 }
