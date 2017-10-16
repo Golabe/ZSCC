@@ -15,7 +15,6 @@ import java.util.List;
  */
 
 public class CourseHeaderAdapter extends BaseQuickAdapter<CourseHeaderModel,BaseViewHolder> {
-
     public CourseHeaderAdapter(@LayoutRes int layoutResId, @Nullable List<CourseHeaderModel> data) {
         super(layoutResId, data);
     }
@@ -27,4 +26,9 @@ public class CourseHeaderAdapter extends BaseQuickAdapter<CourseHeaderModel,Base
                 .setImageResource(R.id.item_course_header_image,item.getImageId());
 
     }
+    public void bindNewData(){
+
+    }
+
+
 }

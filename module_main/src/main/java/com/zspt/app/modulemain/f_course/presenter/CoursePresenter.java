@@ -6,7 +6,7 @@ import com.zspt.app.library_common.base.mvp.BasePresenter;
 import com.zspt.app.modulemain.R;
 import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;
 import com.zspt.app.modulemain.f_course.model.CourseNewModel;
-import com.zspt.app.modulemain.f_course.view.ICourseView;
+import com.zspt.app.modulemain.f_course.view.fragment.ICourseView;
 
 import java.util.ArrayList;
 import java.util.List;

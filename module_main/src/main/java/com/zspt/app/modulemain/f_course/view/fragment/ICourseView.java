@@ -1,4 +1,4 @@
-package com.zspt.app.modulemain.f_course.view;
+package com.zspt.app.modulemain.f_course.view.fragment;
 
 import com.zspt.app.library_common.base.mvp.IBaseView;
 import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;

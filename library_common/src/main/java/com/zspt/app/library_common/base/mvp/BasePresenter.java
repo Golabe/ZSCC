@@ -1,5 +1,6 @@
 package com.zspt.app.library_common.base.mvp;
 
+
 import rx.Subscription;
 
 /**

@@ -1,9 +1,10 @@
 package com.zspt.app.modulemain.f_course.view.fragment;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -15,7 +16,7 @@ import com.zspt.app.modulemain.adapter.CourseNewAdapter;
 import com.zspt.app.modulemain.f_course.model.CourseHeaderModel;
 import com.zspt.app.modulemain.f_course.model.CourseNewModel;
 import com.zspt.app.modulemain.f_course.presenter.CoursePresenter;
-import com.zspt.app.modulemain.f_course.view.ICourseView;
+import com.zspt.app.modulemain.f_course.view.activity.CourseClassifyActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +70,7 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
         mCourseNewAdapter = new CourseNewAdapter(R.layout.item_course_new, new ArrayList<CourseNewModel>());
 
         mCourseNewAdapter.setOnItemClickListener(this);
-       // mCourseNewAdapter.setEmptyView(R.layout.layout_recycler_loading);
+
         mCourseNewAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
             @Override
             public void onLoadMoreRequested() {
@@ -142,12 +143,22 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
      * @param data
      */
     @Override
-    public void bindHeaderData(List<CourseHeaderModel> data) {
+    public void bindHeaderData(final List<CourseHeaderModel> data) {
         if (data.size() == 0) {
-
+            return;
         } else {
             CourseHeaderAdapter adapter = new CourseHeaderAdapter(R.layout.item_course_header, data);
             mHeaderRecyclerView.setAdapter(adapter);
+            adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                    Intent intent=new Intent(getContext(),CourseClassifyActivity.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putString("title",data.get(position).getType());
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            });
         }
     }
 
