@@ -40,13 +40,13 @@ public class LauncherActivity extends BaseMvpActivity implements ILauncherView, 
     protected void initView() {
         mLauncherImage = $(R.id.main_launcher_image);
         mTextTimer = $(R.id.main_launcher_timer);
-
-        mDownCountTimer = new DownCountTimer(this, 3000, 1000);
+        mDownCountTimer = new DownCountTimer(this, 3500, 1000);
         mDownCountTimer.start();
         mTextTimer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LauncherActivity.this, MainActivity.class));
+                mDownCountTimer.cancel();
                 finish();
             }
         });
@@ -77,7 +77,6 @@ public class LauncherActivity extends BaseMvpActivity implements ILauncherView, 
 
     @Override
     public void onFinish() {
-
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }

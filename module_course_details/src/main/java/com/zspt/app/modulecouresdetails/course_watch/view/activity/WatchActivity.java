@@ -11,8 +11,10 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.devlin_n.videoplayer.controller.StandardVideoController;
 import com.devlin_n.videoplayer.player.IjkVideoView;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.TabAdapter;
@@ -25,7 +27,7 @@ import com.zspt.app.modulecouresdetails.util.MoreBottomDialog;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Route(path = AppConstant.MODULE_WATCH)
 public class WatchActivity extends BaseMvpActivity implements IWatchView,View.OnClickListener, MoreBottomDialog.OnItemClickListener {
 
     private FloatingActionButton mFab;

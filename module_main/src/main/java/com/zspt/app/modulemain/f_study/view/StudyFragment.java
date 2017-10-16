@@ -9,8 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 import com.zspt.app.modulemain.adapter.StudyHistoryAdapter;
@@ -24,7 +27,7 @@ import java.util.List;
  * Created by yuequan on 2017/10/10.
  */
 
-public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeRefreshLayout.OnRefreshListener {
+public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeRefreshLayout.OnRefreshListener, BaseQuickAdapter.OnItemClickListener {
     private Toolbar mToolbar;
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mRefreshLayout;
@@ -73,6 +76,7 @@ public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeR
                 fetchData();
             }
         }, mRecyclerView);
+        mStudyHistoryAdapter.setOnItemClickListener(this);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -83,7 +87,6 @@ public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeR
     }
 
     private void initToolbar() {
-        setHasOptionsMenu(true);
         mToolbar = $(R.id.study_toolbar);
         mToolbar.setTitle("最近学习");
         mToolbar.setTitleTextColor(Color.BLACK);
@@ -113,7 +116,7 @@ public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeR
             }
         } else {
             mStudyHistoryAdapter.bindNewData(data);
-            if (mRefreshLayout.isRefreshing()){
+            if (mRefreshLayout.isRefreshing()) {
                 mRefreshLayout.setRefreshing(false);
             }
         }
@@ -129,13 +132,9 @@ public class StudyFragment extends BaseMvpFragment implements IStudyView, SwipeR
         fetchData();
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_study,menu);
-    }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+        ARouter.getInstance().build(AppConstant.MODULE_WATCH).navigation();
     }
 }

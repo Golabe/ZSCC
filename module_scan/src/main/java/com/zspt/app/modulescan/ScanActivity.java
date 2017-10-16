@@ -16,9 +16,10 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 
-@Route(path = "/ModuleScan/ScanActivity")
+@Route(path = AppConstant.MODULE_SCAN)
 public class ScanActivity extends BaseMvpActivity {
     public static boolean isOpen = false;
 

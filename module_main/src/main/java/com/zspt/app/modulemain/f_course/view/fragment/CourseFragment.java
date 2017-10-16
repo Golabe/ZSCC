@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 import com.zspt.app.modulemain.adapter.CourseHeaderAdapter;
@@ -181,6 +182,6 @@ public class CourseFragment extends BaseMvpFragment implements ICourseView, Swip
      */
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-        ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+        ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS).navigation();
     }
 }

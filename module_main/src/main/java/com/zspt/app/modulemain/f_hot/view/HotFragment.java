@@ -17,6 +17,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.youth.banner.Banner;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 
@@ -63,10 +64,9 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
 
     @Override
     protected void initView() {
-        setHasOptionsMenu(true);
-        mBanner = $(R.id.hot_banner);
-        mToolbar = $(R.id.hot_toolbar);
+
         initToolbar();
+        mBanner = $(R.id.hot_banner);
         mRefreshLayout = $(R.id.main_swipe_refresh);
         mRefreshLayout.setOnRefreshListener(this);
 //        mRefreshLayout.post(new Runnable() {
@@ -78,8 +78,6 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
 
         mHotRecyclerView = $(R.id.main_recycler);
         mHotAdapter = new HotAdapter(R.layout.item_hot_new, new ArrayList<HotModel>());
-        //  mHotAdapter.setEmptyView(R.layout.layout_recycler_loading);
-
         mHotAdapter.setOnItemClickListener(this);
 
         mHotAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
@@ -103,13 +101,13 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 int i = view.getId();
                 if (i == R.id.item_hot_layout1) {
-                    ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+                    ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS).navigation();
                 } else if (i == R.id.item_hot_layout2) {
-                    ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+                    ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS).navigation();
                 } else if (i == R.id.item_hot_layout3) {
-                    ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+                    ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS).navigation();
                 } else if (i == R.id.item_hot_layout4) {
-                    ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity").navigation();
+                    ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS).navigation();
                 }
             }
 
@@ -121,6 +119,9 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
      * 初始化Toolbar
      */
     private void initToolbar() {
+        setHasOptionsMenu(true);
+        mToolbar = $(R.id.hot_toolbar);
+        mToolbar.setTitle("热门");
         mToolbar.setTitleTextColor(Color.BLACK);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
     }
@@ -184,9 +185,9 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();
         if (i == R.id.main_menu_hot_scan) {
-            ARouter.getInstance().build("/ModuleScan/ScanActivity").navigation();
+            ARouter.getInstance().build(AppConstant.MODULE_SCAN).navigation();
         } else if (i == R.id.main_menu_hot_search) {
-            ARouter.getInstance().build("/ModuleSearch/SearchActivity").navigation();
+            ARouter.getInstance().build(AppConstant.MODULE_SEARCH).navigation();
         } else {
 
         }

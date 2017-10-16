@@ -13,12 +13,13 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.view.activity.WatchActivity;
 
 
-@Route(path = "/ModuleCourseDetails/CourseDetailsActivity")
+@Route(path = AppConstant.MODULE_COURSE_DETAILS)
 public class CourseDetailsActivity extends BaseMvpActivity implements View.OnClickListener {
 
     @Autowired

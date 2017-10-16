@@ -4,7 +4,7 @@
 
     <application
         android:theme="@style/Base.AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".view.LoginActivity">
 
         </activity>
     </application>

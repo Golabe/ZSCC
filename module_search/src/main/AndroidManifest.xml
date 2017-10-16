@@ -5,7 +5,7 @@
     <application
 
         android:theme="@style/Base.AppTheme">
-        <activity android:name=".SearchActivity"/>
+        <activity android:name=".view.SearchActivity"/>
     </application>
 
 </manifest>
