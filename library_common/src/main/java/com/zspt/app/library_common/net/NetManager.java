@@ -8,7 +8,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
+
 
 /**
  * Author: Othershe
@@ -39,15 +39,6 @@ public class NetManager {
         return retrofit.create(service);
     }
 
-    public <S> S create1(Class<S> service) {
-        Retrofit retrofit = new Retrofit.Builder()
-                .client(getOkHttpClient())
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .baseUrl(getBaseUrl(service))
-                .build();
-        return retrofit.create(service);
-    }
 
     /**
      * 解析接口中的BASE_URL，解决BASE_URL不一致的问题

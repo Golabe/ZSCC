@@ -45,7 +45,7 @@ public class RxManager {
                 .map(new Func1<HttpResult<T>, T>() {
                     @Override
                     public T call(HttpResult<T> httpResult) {
-                        if (httpResult.isError()) {
+                        if (httpResult.getCode()!=200) {
                             throw new ApiException();
                         }
                         return httpResult.getResult();

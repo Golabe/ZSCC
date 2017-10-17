@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zspt.app.modulelogin">
 
-    <application
-        android:theme="@style/Base.AppTheme">
-        <activity android:name=".view.LoginActivity">
-
-        </activity>
+    <application android:theme="@style/Base.AppTheme">
+        <activity android:name=".view.LoginActivity"></activity>
+        <activity android:name=".view.ForgotActivity"></activity>
     </application>
 
 </manifest>
