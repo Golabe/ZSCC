@@ -1,18 +1,24 @@
 package com.zspt.app.modulecouresdetails.course_details;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
@@ -65,7 +71,6 @@ public class CourseDetailsActivity extends BaseMvpActivity implements View.OnCli
         mStartStudy = $(R.id.details_start_study);
         mStartStudy.setOnClickListener(this);
 
-
         FloatingActionButton mFabCollect = $(R.id.fab_collect);
         mFabCollect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +83,14 @@ public class CourseDetailsActivity extends BaseMvpActivity implements View.OnCli
         mFabScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ImageView imageView=new ImageView(CourseDetailsActivity.this);
+               imageView.setPadding(100,100,100,100);
+                Bitmap mBitmap = CodeUtils.createImage("哈哈", 400, 400, BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
+                imageView.setImageBitmap(mBitmap);
 
+                new AlertDialog.Builder(CourseDetailsActivity.this)
+                        .setView(imageView)
+                        .show();
             }
         });
 

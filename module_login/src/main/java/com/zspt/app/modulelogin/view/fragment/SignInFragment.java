@@ -107,7 +107,7 @@ public class SignInFragment extends BaseMvpFragment implements ISignInView {
         mForgot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(mActivity, ForgotActivity.class));
+                startActivity(new Intent(getContext(), ForgotActivity.class));
 
             }
         });
