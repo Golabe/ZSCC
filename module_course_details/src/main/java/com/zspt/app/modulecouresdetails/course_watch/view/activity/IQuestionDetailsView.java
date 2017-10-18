@@ -3,8 +3,8 @@ package com.zspt.app.modulecouresdetails.course_watch.view.activity;
 import com.zspt.app.library_common.base.mvp.IBaseView;
 
 /**
- * Created by yuequan on 2017/10/11.
+ * Created by yuequan on 2017/10/18.
  */
 
-public interface IQuestionView extends IBaseView {
+public interface IQuestionDetailsView extends IBaseView {
 }

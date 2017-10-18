@@ -2,9 +2,13 @@ package com.zspt.app.modulecouresdetails.course_watch.view.activity;
 
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
+import com.zspt.app.modulecouresdetails.course_watch.model.QuestionLevel0;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.QuestionPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.fragment.IQuestionView;
 
-public class QuestionActivity extends BaseMvpActivity implements IQuestionView{
+import java.util.List;
+
+public class QuestionActivity extends BaseMvpActivity implements IQuestionView {
 
     @Override
     protected void onFetchData() {
@@ -30,6 +34,11 @@ public class QuestionActivity extends BaseMvpActivity implements IQuestionView{
 
     @Override
     public void onError() {
+
+    }
+
+    @Override
+    public void onSuccess(List<QuestionLevel0> data) {
 
     }
 }

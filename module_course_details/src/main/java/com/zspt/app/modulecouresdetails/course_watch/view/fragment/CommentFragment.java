@@ -4,6 +4,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
@@ -23,6 +24,7 @@ public class CommentFragment extends BaseMvpFragment implements ICommentView, Sw
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mRefreshLayout;
     private CommentAdapter mCommentAdapter;
+
     private int PAGE_COUNT = 1;
     private boolean mIsLoadMore;
     private int mTempPageCount = 2;
@@ -66,7 +68,12 @@ public class CommentFragment extends BaseMvpFragment implements ICommentView, Sw
         mRecyclerView = $(R.id.main_recycler);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(mCommentAdapter);
-
+        mCommentAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                Toast.makeText(mActivity,"image",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

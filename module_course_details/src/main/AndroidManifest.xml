@@ -3,15 +3,12 @@
     package="com.zspt.app.modulecouresdetails">
 
     <application android:theme="@style/Base.AppTheme">
+        <activity android:name=".course_details.CourseDetailsActivity"></activity>
         <activity
-            android:name=".course_details.CourseDetailsActivity"
-            >
-        </activity>
-        <activity android:name=".course_watch.view.activity.WatchActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-           />
-
-        <activity android:name=".course_watch.view.activity.QuestionActivity"/>
+            android:name=".course_watch.view.activity.WatchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".course_watch.view.activity.QuestionActivity" />
+        <activity android:name=".course_watch.view.activity.QuestionDetailsActivity"></activity>
     </application>
 
 </manifest>

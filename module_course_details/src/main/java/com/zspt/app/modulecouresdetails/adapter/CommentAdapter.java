@@ -30,8 +30,10 @@ public class CommentAdapter extends BaseQuickAdapter<CommentModel, BaseViewHolde
                 .setText(R.id.item_comment_content, item.getContent())
                 .setText(R.id.item_comment_time, item.getTime());
         Picasso.with(mContext).load(item.getImageUrl()).into((ImageView) helper.getView(R.id.item_comment_image));
+        helper.addOnClickListener(R.id.item_comment_image);
 
     }
+
     public void bindNewData(List<CommentModel> data) {
         mData.clear();
         mData.addAll(data);
