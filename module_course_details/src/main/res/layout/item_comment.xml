@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
 
-</LinearLayout>
+    <com.zspt.app.library_common.widget.CircleImageView
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/white"
+        android:id="@+id/item_comment_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/item_comment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/item_comment_image"
+        android:text="name"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/item_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_comment_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/item_comment_image"
+        android:text="2017/8/12"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/item_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_comment_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/item_comment_image"
+
+        android:text="content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+</RelativeLayout>

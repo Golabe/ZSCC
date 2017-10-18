@@ -1,5 +1,6 @@
 package com.zspt.app.modulecouresdetails.course_watch.view.fragment;
 
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -20,6 +21,7 @@ import java.util.List;
 
 public class ChapterFragment extends BaseMvpFragment implements IChapterView {
     private RecyclerView mRecyclerView;
+    private SwipeRefreshLayout mRefreshLayout;
     private ChapterAdapter mChapterAdapter;
     private List<MultiItemEntity>mData;
 
@@ -36,6 +38,8 @@ public class ChapterFragment extends BaseMvpFragment implements IChapterView {
 
     @Override
     protected void initView() {
+        mRefreshLayout=$(R.id.main_swipe_refresh);
+
         mRecyclerView=$(R.id.main_recycler);
         mData=getData();
         mChapterAdapter=new ChapterAdapter(mData);
