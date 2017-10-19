@@ -5,30 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zspt.app.modulecouresdetails.course_watch.view.activity.QuestionDetailsActivity">
+    tools:context="com.zspt.app.modulecouresdetails.course_watch.view.activity.AnswerActivity">
 
     <android.support.v7.widget.Toolbar
-
-        android:id="@+id/question_details_toolbar"
+        android:id="@+id/answer_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/colorPrimary"
-        android:elevation="@dimen/elevation_normal">
+        android:elevation="@dimen/elevation_normal"></android.support.v7.widget.Toolbar>
 
-    </android.support.v7.widget.Toolbar>
-
-    <include
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/question_details_recycler"
-        layout="@layout/layout_recycler" />
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入你的答案"
+            android:textSize="14sp" />
+    </LinearLayout>
+
     <Button
-        android:background="?selectableItemBackground"
-        android:id="@+id/question_details_answer"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:text="我要回答"
         android:layout_width="match_parent"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:background="#0d7df4"
+        android:text="发布"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
 </LinearLayout>

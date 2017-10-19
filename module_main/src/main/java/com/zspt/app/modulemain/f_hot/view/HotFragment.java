@@ -17,11 +17,14 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.youth.banner.Banner;
+import com.youth.banner.listener.OnBannerListener;
 import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.fragment.BaseMvpFragment;
 import com.zspt.app.modulemain.R;
 
 import com.zspt.app.modulemain.adapter.HotAdapter;
+import com.zspt.app.modulemain.f_hot.PicassoImageLoader;
+import com.zspt.app.modulemain.f_hot.model.BannerModel;
 import com.zspt.app.modulemain.f_hot.model.HotModel;
 import com.zspt.app.modulemain.f_hot.presenter.HotPresenter;
 
@@ -34,7 +37,8 @@ import java.util.List;
 
 public class HotFragment extends BaseMvpFragment implements IHotView,
         SwipeRefreshLayout.OnRefreshListener,
-        BaseQuickAdapter.OnItemClickListener {
+        BaseQuickAdapter.OnItemClickListener,
+        OnBannerListener {
 
     private static final String TAG = "HotFragment";
     private HotPresenter mHotPresenter;
@@ -45,13 +49,14 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
     private SwipeRefreshLayout mRefreshLayout;
     private Banner mBanner;
     private Toolbar mToolbar;
+    private List<BannerModel>mBannerData;
 
     private HotAdapter mHotAdapter;
 
     @Override
     protected void fetchData() {
         mHotPresenter = new HotPresenter(this);
-        mHotPresenter.onBanner(mBanner);
+        mHotPresenter.onBanner();
         mHotPresenter.getHotList();
         addPresenter(mHotPresenter);
 
@@ -113,6 +118,8 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
 
         });
 
+        mBanner.setOnBannerListener(this);
+
     }
 
     /**
@@ -158,11 +165,26 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
         } else {
 
             mHotAdapter.bindNewData(data);
-            Log.d(TAG, "onSuccess: ++++++++++++++++++++++++++++++++++++++");
             if (mRefreshLayout.isRefreshing()) {
                 mRefreshLayout.setRefreshing(false);
             }
         }
+    }
+
+    @Override
+    public void onBannerSuccess(List<BannerModel> data) {
+        mBannerData=new ArrayList<>();
+        mBannerData=data;
+        List<String>list=new ArrayList<>();
+        for (int i=0;i<data.size();i++){
+            list.add(data.get(i).getImageUrl());
+        }
+        mBanner.setImages(list).setImageLoader(new PicassoImageLoader()).start();
+    }
+
+    @Override
+    public void onBannerError() {
+
     }
 
     /**
@@ -173,7 +195,6 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
         mIsLoadMore = false;
         PAGE_COUNT = 1;
         fetchData();
-        Log.d(TAG, "onRefresh: ___________________________________");
     }
 
     @Override
@@ -198,5 +219,29 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mBanner.startAutoPlay();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mBanner.stopAutoPlay();
+    }
+
+    /**
+     * Banner 点击事件
+     *
+     * @param position
+     */
+    @Override
+    public void OnBannerClick(int position) {
+       ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS)
+               .withInt("id",mBannerData.get(position).getId())
+               .navigation();
     }
 }

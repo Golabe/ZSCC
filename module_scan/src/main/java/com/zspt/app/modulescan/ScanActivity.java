@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -17,21 +18,16 @@ import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 import com.zspt.app.library_common.app.AppConstant;
+import com.zspt.app.library_common.base.activity.BaseActivity;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 
 @Route(path = AppConstant.MODULE_SCAN)
-public class ScanActivity extends BaseMvpActivity {
+public class ScanActivity extends BaseActivity {
     public static boolean isOpen = false;
 
     private CaptureFragment mCaptureFragment;
     private Toolbar mToolbar;
-
-    @Override
-    protected void onFetchData() {
-
-    }
-
-
+    private ImageView mLamp;
     @Override
     protected int bindLayoutId() {
         return R.layout.activity_scan;
@@ -42,6 +38,7 @@ public class ScanActivity extends BaseMvpActivity {
         ZXingLibrary.initDisplayOpinion(this);
 
         mToolbar = $(R.id.scan_toolbar);
+        mLamp=$(R.id.lamp);
         initToolbar();
 
         initScanView();
@@ -82,9 +79,11 @@ public class ScanActivity extends BaseMvpActivity {
                 if (!isOpen) {
                     CodeUtils.isLightEnable(true);
                     isOpen = true;
+                    mLamp.setImageResource(R.drawable.ic_lamp_on);
                 } else {
                     CodeUtils.isLightEnable(false);
                     isOpen = false;
+                    mLamp.setImageResource(R.drawable.ic_lamp_off);
                 }
             }
         });
@@ -105,7 +104,7 @@ public class ScanActivity extends BaseMvpActivity {
             if (result == null) {
                 return;
             }
-            ARouter.getInstance().build("/ModuleCourseDetails/CourseDetailsActivity")
+            ARouter.getInstance().build(AppConstant.MODULE_COURSE_DETAILS)
                     .withInt("tag",200)
                     .withString("id",result)
                     .navigation();

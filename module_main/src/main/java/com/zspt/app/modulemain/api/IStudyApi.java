@@ -12,7 +12,7 @@ import rx.Observable;
  * Created by yuequan on 2017/10/13.
  */
 
-public interface StudyApi {
+public interface IStudyApi {
 
     @GET
     Observable<List<StudyHistoryModel>> getStudyData(@Url String url);

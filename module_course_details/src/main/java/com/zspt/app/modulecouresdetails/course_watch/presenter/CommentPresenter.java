@@ -33,9 +33,10 @@ public class CommentPresenter extends BasePresenter<ICommentView> {
                         if (data == null) {
                             return;
                         }
-                        if (data.getCode() == 200) {
-                            mView.onSuccess(data.getResult());
-                            Log.d(TAG, "_onNext: "+data.getResult().get(1).getName());
+                        
+                        if (data.getStatus() == 200) {
+                            mView.onSuccess(data.getData());
+                            Log.d(TAG, "_onNext: "+data.getData().get(1).getName());
                         }
                     }
 

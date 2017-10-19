@@ -45,10 +45,10 @@ public class RxManager {
                 .map(new Func1<HttpResult<T>, T>() {
                     @Override
                     public T call(HttpResult<T> httpResult) {
-                        if (httpResult.getCode()!=200) {
+                        if (httpResult.getStatus()!=200) {
                             throw new ApiException();
                         }
-                        return httpResult.getResult();
+                        return httpResult.getData();
                     }
                 })
                 .subscribeOn(Schedulers.io())

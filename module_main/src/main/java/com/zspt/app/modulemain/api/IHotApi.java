@@ -13,7 +13,7 @@ import rx.Observable;
  * Created by yuequan on 2017/10/12.
  */
 
-public interface HotApi {
+public interface IHotApi {
     String BASE_URL = "http://127.0.0.1/api/hot.php/";
 
     @GET

@@ -6,16 +6,16 @@ package com.zspt.app.library_common.base.model;
 
 public class HttpResult <T> {
 
-    private int code;
+    private int status;
     private String message;
-    private T result;
+    private T data;
 
-    public int getCode() {
-        return code;
+    public int getStatus() {
+        return status;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getMessage() {
@@ -26,11 +26,11 @@ public class HttpResult <T> {
         this.message = message;
     }
 
-    public T getResult() {
-        return result;
+    public T getData() {
+        return data;
     }
 
-    public void setResult(T result) {
-        this.result = result;
+    public void setData(T result) {
+        this.data = result;
     }
 }

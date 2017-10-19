@@ -1,5 +1,7 @@
 package com.zspt.app.library_common.net;
 
+import com.zspt.app.library_common.app.AppConstant;
+
 import java.lang.reflect.Field;
 import java.util.concurrent.TimeUnit;
 
@@ -34,7 +36,7 @@ public class NetManager {
                 .client(getOkHttpClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .baseUrl("http://39.108.230.126/api/")
+                .baseUrl(AppConstant.BASE_URL)
                 .build();
         return retrofit.create(service);
     }

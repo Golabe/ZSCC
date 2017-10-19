@@ -1,14 +1,17 @@
 package com.zspt.app.modulecouresdetails.course_watch.view.activity;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.library_common.widget.CircleImageView;
 import com.zspt.app.modulecouresdetails.R;
@@ -22,6 +25,7 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
     private SwipeRefreshLayout mRefreshLayout;
     private RecyclerView mRecyclerView;
     private QuestionDetailsAdapter mQuestionDetailsAdapter;
+    private Button mAnswer;
 
     @Override
     protected void onFetchData() {
@@ -37,6 +41,7 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
     protected void initView() {
         initToolbar();
         mRefreshLayout = $(R.id.main_swipe_refresh);
+        mAnswer = $(R.id.question_details_answer);
         mRefreshLayout.setOnRefreshListener(this);
 //        mRefreshLayout.post(new Runnable() {
 //            @Override
@@ -52,6 +57,13 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
         mQuestionDetailsAdapter.addHeaderView(getHeaderView(1));
 
         mRecyclerView.setAdapter(mQuestionDetailsAdapter);
+        mAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuestionDetailsActivity.this, AnswerActivity.class));
+                startActivityForResult(new Intent(QuestionDetailsActivity.this,AnswerActivity.class), AppConstant.REQUEST_CODE_ANSWER);
+            }
+        });
 
     }
 
@@ -91,6 +103,20 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
      */
     @Override
     public void onRefresh() {
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case AppConstant.REQUEST_CODE_ANSWER:
+                switch (resultCode){
+
+                }
+
+                break;
+        }
 
     }
 }
