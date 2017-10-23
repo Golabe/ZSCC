@@ -39,7 +39,6 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
         SwipeRefreshLayout.OnRefreshListener,
         BaseQuickAdapter.OnItemClickListener,
         OnBannerListener {
-
     private static final String TAG = "HotFragment";
     private HotPresenter mHotPresenter;
     private boolean mIsLoadMore;
@@ -50,7 +49,6 @@ public class HotFragment extends BaseMvpFragment implements IHotView,
     private Banner mBanner;
     private Toolbar mToolbar;
     private List<BannerModel>mBannerData;
-
     private HotAdapter mHotAdapter;
 
     @Override

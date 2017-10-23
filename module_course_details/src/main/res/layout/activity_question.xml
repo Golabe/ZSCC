@@ -8,38 +8,61 @@
     tools:context="com.zspt.app.modulecouresdetails.course_watch.view.activity.QuestionActivity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/question_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize">
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_normal">
 
     </android.support.v7.widget.Toolbar>
-    <EditText
 
-        android:textSize="14sp"
-        android:hint="请输入问题标题"
+    <EditText
+        android:id="@+id/question_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:hint="请输入问题标题"
+        android:padding="10dp"
+        android:textSize="14sp" />
 
     <View
-        android:background="@android:color/black"
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_height="1dp"
+        android:background="@android:color/black" />
 
     <LinearLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1">
+
         <EditText
+            android:id="@+id/question_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="描述问题"
+            android:padding="10dp"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp"
+
+        >
+
         <Button
-            android:layout_alignParentRight="true"
+            android:id="@+id/question_submit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#1f7ae9"
+            android:text="发布"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
     </RelativeLayout>
+
 
 </LinearLayout>

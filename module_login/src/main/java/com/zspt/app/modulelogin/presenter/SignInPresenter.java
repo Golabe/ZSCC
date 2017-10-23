@@ -30,14 +30,14 @@ public class SignInPresenter extends BasePresenter<ISignInView> {
                 , new RxSubscriber<HttpResult<SignInResult>>(false) {
                     @Override
                     protected void _onNext(HttpResult<SignInResult> data) {
-                        Log.d(TAG, "_onNext: "+data.getResult().getName());
+                        Log.d(TAG, "_onNext: "+data.getData().getName());
                         if (data!=null){
                             mView.hideProgress();
-                            if (data.getCode()==200){
-                                mView.onLoginSuccess(data.getResult());
-                                Log.d(TAG, "_onNext: "+data.getResult().getName());
+                            if (data.getStatus()==200){
+                                mView.onLoginSuccess(data.getData());
+                                Log.d(TAG, "_onNext: "+data.getData().getName());
                             }
-                            else if (data.getCode()==1000){
+                            else if (data.getStatus()==1000){
                                 mView.onLoginError("手机号或密码错误");
                             }
                         }
@@ -45,6 +45,7 @@ public class SignInPresenter extends BasePresenter<ISignInView> {
 
                     @Override
                     protected void _onError(Throwable e) {
+                        mView.onError();
                         Log.d(TAG, "_onError: "+e.toString());
                     }
                 });

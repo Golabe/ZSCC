@@ -121,7 +121,9 @@ public class SignInFragment extends BaseMvpFragment implements ISignInView {
 
     @Override
     public void onError() {
-
+        Toast.makeText(mActivity,"登陆失败",Toast.LENGTH_SHORT).show();
+        mLogin.setVisibility(View.VISIBLE);
+        mLoginProgress.setVisibility(View.GONE);
     }
 
 

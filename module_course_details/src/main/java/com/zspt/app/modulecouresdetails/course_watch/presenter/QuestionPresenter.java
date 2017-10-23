@@ -29,8 +29,8 @@ public class QuestionPresenter extends BasePresenter<IQuestionView> {
                     @Override
                     protected void _onNext(HttpResult<List<QuestionLevel0>> data) {
 
-                        if (data.getCode() == 200) {
-                            mView.onSuccess(data.getResult());
+                        if (data.getStatus() == 200) {
+                            mView.onSuccess(data.getData());
                         }
 
                     }
