@@ -144,6 +144,7 @@ public class WatchActivity extends BaseMvpActivity implements IWatchView,View.On
         } else if (i == R.id.details_watch_check_in) {
         } else if (i == R.id.details_watch_download) {
         } else if (i == R.id.details_watch_homework) {
+            startActivity(new Intent(WatchActivity.this,HomeworkActivity.class));
         } else if (i == R.id.details_watch_question) {
             startActivity(new Intent(WatchActivity.this, QuestionActivity.class));
 

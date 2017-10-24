@@ -19,7 +19,7 @@ import java.util.List;
  * Created by yuequan on 2017/10/11.
  */
 
-public class ChapterFragment extends BaseMvpFragment implements IChapterView {
+public class ChapterFragment extends BaseMvpFragment implements IChapterView ,SwipeRefreshLayout.OnRefreshListener{
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mRefreshLayout;
     private ChapterAdapter mChapterAdapter;
@@ -39,6 +39,7 @@ public class ChapterFragment extends BaseMvpFragment implements IChapterView {
     @Override
     protected void initView() {
         mRefreshLayout=$(R.id.main_swipe_refresh);
+        mRefreshLayout.setOnRefreshListener(this);
 
         mRecyclerView=$(R.id.main_recycler);
         mData=getData();
@@ -70,5 +71,10 @@ public class ChapterFragment extends BaseMvpFragment implements IChapterView {
     @Override
     public void onError() {
 
+    }
+
+    @Override
+    public void onRefresh() {
+        mRefreshLayout.setRefreshing(false);
     }
 }
