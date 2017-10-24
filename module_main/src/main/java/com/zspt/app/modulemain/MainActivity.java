@@ -22,7 +22,7 @@ public class MainActivity extends BaseActivity {
 
     private HotFragment mHotFragment;
     private StudyFragment mStudyFragment;
-    private CourseFragment mCouresFragment;
+    private CourseFragment mCourseFragment;
     private MeFragment mMeFragment;
 
     private List<BottomTabLayout.TabItemView>mTabItemViews;
@@ -56,11 +56,11 @@ public class MainActivity extends BaseActivity {
 
         mHotFragment=new HotFragment();
         mStudyFragment=new StudyFragment();
-        mCouresFragment=new CourseFragment();
+        mCourseFragment=new CourseFragment();
         mMeFragment=new MeFragment();
 
         mFragments.add(mHotFragment);
-        mFragments.add(mCouresFragment);
+        mFragments.add(mCourseFragment);
         mFragments.add(mStudyFragment);
         mFragments.add(mMeFragment);
 

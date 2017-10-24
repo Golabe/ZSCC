@@ -47,22 +47,6 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-
-        >
-
-        <Button
-            android:id="@+id/question_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:background="#1f7ae9"
-            android:text="发布"
-            android:textColor="@android:color/white"
-            android:textSize="14sp" />
-    </RelativeLayout>
 
 
 </LinearLayout>

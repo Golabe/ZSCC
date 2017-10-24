@@ -5,6 +5,8 @@ package com.zspt.app.library_common.app;
  */
 
 public class AppConstant {
+    public static  final String APP_LAUNCHER="Guide";
+
     public static final String BASE_URL="http://39.108.230.126/api/";
     public static final String MODULE_LOGIN="/ModuleLogin/LoginActivity";
     public static final String MODULE_SCAN="/ModuleScan/ScanActivity";

@@ -1,12 +1,14 @@
 package com.zspt.app.modulemain.f_course.view.activity;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.zspt.app.library_common.app.AppConstant;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulemain.R;
 import com.zspt.app.modulemain.f_course.presenter.CourseClassifyPresenter;
@@ -60,5 +62,14 @@ public class CourseClassifyActivity extends BaseMvpActivity implements ICourseCl
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_course_classify,menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.menu_course_classify_search) {
+            ARouter.getInstance().build(AppConstant.MODULE_SEARCH).navigation();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -14,6 +14,6 @@ import rx.Observable;
  */
 
 public interface IBannerApi {
-    @GET("v1/carousel")
+    @GET("hotbanner/index.php")
     Observable<HttpResult<List<BannerModel>>> getBanner();
 }

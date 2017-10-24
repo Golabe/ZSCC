@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zspt.app.modulecouresdetails.course_watch.view.activity.VoteActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/vote_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation_normal"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <include
+        android:id="@+id/vote_recycler"
+        layout="@layout/layout_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/vote_fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_48" />
+</RelativeLayout>

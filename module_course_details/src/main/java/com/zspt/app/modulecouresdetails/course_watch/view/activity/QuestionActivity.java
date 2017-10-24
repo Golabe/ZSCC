@@ -2,9 +2,12 @@ package com.zspt.app.modulecouresdetails.course_watch.view.activity;
 
 import android.graphics.Color;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.utils.TextUtils;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
@@ -16,7 +19,6 @@ public class QuestionActivity extends BaseMvpActivity implements IQuestionActivi
     private Toolbar mToolbar;
     private QuestionActivityPresenter mQuestionActivityPresenter;
     private EditText mTitle, mContent;
-    private Button mSubmit;
 
     @Override
     protected void onFetchData() {
@@ -33,17 +35,6 @@ public class QuestionActivity extends BaseMvpActivity implements IQuestionActivi
         initToolbar();
         mTitle = $(R.id.question_title);
         mContent = $(R.id.question_content);
-        mSubmit = $(R.id.question_submit);
-        mSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String title=mTitle.getText().toString();
-                String content=mContent.getText().toString();
-                if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(content)) {
-                    mQuestionActivityPresenter.onSubmit(title,content);
-                }
-            }
-        });
     }
 
     private void initToolbar() {
@@ -69,5 +60,20 @@ public class QuestionActivity extends BaseMvpActivity implements IQuestionActivi
     @Override
     public void onError() {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_question,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int i = item.getItemId();
+        if (i == R.id.menu_question_release) {
+            Toast.makeText(this,"发布",Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
