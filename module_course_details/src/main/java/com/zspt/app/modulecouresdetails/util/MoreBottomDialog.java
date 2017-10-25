@@ -24,7 +24,7 @@ public class MoreBottomDialog extends BaseBottomDialog implements View.OnClickLi
 
         mQuestion = v.findViewById(R.id.details_watch_question);
         mDownload = v.findViewById(R.id.details_watch_download);
-        mCheckIn = v.findViewById(R.id.details_watch_check_in);
+        mCheckIn = v.findViewById(R.id.details_watch_comment);
         mVote = v.findViewById(R.id.details_watch_vote);
         mHomework = v.findViewById(R.id.details_watch_homework);
         mBrainstorming = v.findViewById(R.id.details_watch_brainstorming);

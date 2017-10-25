@@ -13,7 +13,8 @@
         <activity android:name=".course_watch.view.activity.HomeworkDetailsActivity" />
         <activity android:name=".course_watch.view.activity.VoteActivity" />
         <activity android:name=".course_watch.view.activity.ReleaseVoteActivity" />
-        <activity android:name=".course_watch.view.activity.VoteDetailsActivity"></activity>
+        <activity android:name=".course_watch.view.activity.VoteDetailsActivity" />
+        <activity android:name=".course_watch.view.activity.ReleaseCommentActivity"></activity>
     </application>
 
 </manifest>

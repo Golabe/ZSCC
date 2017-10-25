@@ -23,9 +23,16 @@
             android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity android:name=".course_watch.view.activity.QuestionActivity" />
         <activity android:name=".course_watch.view.activity.QuestionDetailsActivity" />
-        <activity android:name=".course_watch.view.activity.AnswerActivity"
-            android:windowSoftInputMode="stateVisible|adjustResize"
-            ></activity>
+        <activity
+            android:name=".course_watch.view.activity.AnswerActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity android:name=".course_watch.view.activity.ReleaseCommentActivity" />
+        <activity android:name=".course_watch.view.activity.VoteActivity"/>
+        <activity android:name=".course_watch.view.activity.VoteDetailsActivity"/>
+        <activity android:name=".course_watch.view.activity.ReleaseVoteActivity"/>
+
+        <activity android:name=".course_watch.view.activity.HomeworkActivity"/>
+        <activity android:name=".course_watch.view.activity.HomeworkDetailsActivity"/>
     </application>
 
 </manifest>

@@ -141,7 +141,8 @@ public class WatchActivity extends BaseMvpActivity implements IWatchView,View.On
         if (i == R.id.details_watch_brainstorming) {
             Toast.makeText(WatchActivity.this, "kak", Toast.LENGTH_SHORT).show();
 
-        } else if (i == R.id.details_watch_check_in) {
+        } else if (i == R.id.details_watch_comment) {
+            startActivity(new Intent(WatchActivity.this,ReleaseCommentActivity.class));
         } else if (i == R.id.details_watch_download) {
         } else if (i == R.id.details_watch_homework) {
             startActivity(new Intent(WatchActivity.this,HomeworkActivity.class));

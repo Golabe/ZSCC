@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.utils.TextUtils;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
+import com.zspt.app.library_common.util.hint.ToastUtil;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.QuestionActivityPresenter;
 
@@ -64,15 +65,24 @@ public class QuestionActivity extends BaseMvpActivity implements IQuestionActivi
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_question,menu);
+        getMenuInflater().inflate(R.menu.menu_question, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();
+
         if (i == R.id.menu_question_release) {
-            Toast.makeText(this,"发布",Toast.LENGTH_SHORT).show();
+            int contentLength = mContent.length();
+            int titleLength = mTitle.length();
+            if (titleLength == 0 || contentLength == 0) {
+                ToastUtil.showShortToast("发送内容不为空");
+            } else if (contentLength < 5 || titleLength < 5) {
+                ToastUtil.showShortToast("发送内容不能少于5个字");
+            } else {
+
+            }
         }
         return super.onOptionsItemSelected(item);
     }
