@@ -108,6 +108,9 @@ public class HomeworkActivity extends BaseMvpActivity implements IHomeworkView, 
                 mTempPageCount++;
             }
         } else {
+            if (data.size()==0){
+                mRefreshLayout.setRefreshing(false);
+            }
             mHomeworkAdapter.bindNewData(data);
             if (mRefreshLayout.isRefreshing()) {
                 mRefreshLayout.setRefreshing(false);

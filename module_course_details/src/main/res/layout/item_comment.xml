@@ -42,7 +42,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/item_comment_image"
-
         android:text="content"
         android:textColor="@android:color/black"
         android:textSize="16sp" />

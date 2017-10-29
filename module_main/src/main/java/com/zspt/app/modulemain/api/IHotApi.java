@@ -14,8 +14,8 @@ import rx.Observable;
  */
 
 public interface IHotApi {
-    String BASE_URL = "http://127.0.0.1/api/hot.php/";
 
-    @GET
-    Observable<HttpResult<List<HotModel>>> getHotData(@Url String url);
+//    @GET
+//    Observable<HttpResult<List<HotModel>>> getHotData(@Url String url);
+
 }

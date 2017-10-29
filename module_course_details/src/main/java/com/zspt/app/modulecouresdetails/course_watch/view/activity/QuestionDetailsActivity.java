@@ -61,7 +61,7 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(QuestionDetailsActivity.this, AnswerActivity.class));
-                startActivityForResult(new Intent(QuestionDetailsActivity.this,AnswerActivity.class), AppConstant.REQUEST_CODE_ANSWER);
+                startActivityForResult(new Intent(QuestionDetailsActivity.this, AnswerActivity.class), AppConstant.REQUEST_CODE_ANSWER);
             }
         });
 
@@ -109,12 +109,11 @@ public class QuestionDetailsActivity extends BaseMvpActivity implements SwipeRef
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case AppConstant.REQUEST_CODE_ANSWER:
-                switch (resultCode){
+                switch (resultCode) {
 
                 }
-
                 break;
         }
 

@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Time:  2016/8/11 14:30
  */
 public class NetManager {
-    private static final int DEFAULT_TIMEOUT = 10;
+    private static final int DEFAULT_TIMEOUT = 2;
 
     public static NetManager getInstance() {
         return SingletonHolder.INSTANCE;
