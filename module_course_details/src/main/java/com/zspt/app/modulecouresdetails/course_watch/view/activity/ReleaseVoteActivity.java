@@ -11,8 +11,9 @@ import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.library_common.util.hint.ToastUtil;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.ReleaseVotePresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IReleaseVoteView;
 
-public class ReleaseVoteActivity extends BaseMvpActivity  implements IReleaseVoteView{
+public class ReleaseVoteActivity extends BaseMvpActivity  implements IReleaseVoteView {
     private EditText mTitle, mContent, mOption1, mOption2, mOption3, mOption4;
     private Button mRelease;
     private ReleaseVotePresenter mPresenter;

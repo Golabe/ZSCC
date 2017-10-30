@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.library_common.base.model.HttpResult;
@@ -17,6 +16,7 @@ import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.MyTextWatcher;
 import com.zspt.app.modulecouresdetails.course_watch.model.ReleaseCommentModel;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.ReleaseCommentPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IReleaseCommentView;
 
 public class ReleaseCommentActivity extends BaseMvpActivity implements IReleaseCommentView {
     private EditText mEditText;

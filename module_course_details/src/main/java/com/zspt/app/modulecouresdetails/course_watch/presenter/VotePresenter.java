@@ -9,7 +9,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.IVoteApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.VoteModel;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IVoteView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IVoteView;
 
 import java.util.List;
 

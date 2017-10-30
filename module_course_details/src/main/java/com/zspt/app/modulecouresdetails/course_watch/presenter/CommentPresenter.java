@@ -9,7 +9,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.ICommentApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.CommentModel;
-import com.zspt.app.modulecouresdetails.course_watch.view.fragment.ICommentView;
+import com.zspt.app.modulecouresdetails.course_watch.view.fragment.interfaces.ICommentView;
 
 import java.util.List;
 

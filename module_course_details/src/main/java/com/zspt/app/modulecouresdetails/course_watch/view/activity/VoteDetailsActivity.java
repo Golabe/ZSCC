@@ -9,6 +9,7 @@ import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.library_common.util.hint.ToastUtil;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.VoteDetailsPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IVoteDetailsView;
 
 public class VoteDetailsActivity extends BaseMvpActivity implements IVoteDetailsView, View.OnClickListener {
     private Button mOption1, mOption2, mOption3, mOption4;

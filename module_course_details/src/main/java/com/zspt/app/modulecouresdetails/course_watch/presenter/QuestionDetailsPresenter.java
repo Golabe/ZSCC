@@ -7,7 +7,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.IQuestionDetailsApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.QuestionDetailsModel;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IQuestionDetailsView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IQuestionDetailsView;
 
 import java.util.List;
 

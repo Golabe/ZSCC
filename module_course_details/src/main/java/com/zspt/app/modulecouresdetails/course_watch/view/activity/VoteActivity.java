@@ -15,6 +15,7 @@ import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.VoteAdapter;
 import com.zspt.app.modulecouresdetails.course_watch.model.VoteModel;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.VotePresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IVoteView;
 
 import java.util.ArrayList;
 import java.util.List;

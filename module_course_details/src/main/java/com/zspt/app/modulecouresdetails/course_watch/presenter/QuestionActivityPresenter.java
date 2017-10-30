@@ -7,7 +7,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.IQuestionSubmitApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.QuestionResult;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IQuestionActivityView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IQuestionActivityView;
 
 import java.util.HashMap;
 import java.util.Map;

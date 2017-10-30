@@ -1,4 +1,4 @@
-package com.zspt.app.modulecouresdetails.course_watch.view.activity;
+package com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces;
 
 import com.zspt.app.library_common.base.model.HttpResult;
 import com.zspt.app.library_common.base.mvp.IBaseView;

@@ -16,6 +16,7 @@ import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.HomeworkDetailsAdapter;
 import com.zspt.app.modulecouresdetails.course_watch.model.HomeworkDetailsModel;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.HomeworkDetailsPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IHomeworkDetailsView;
 
 import java.util.ArrayList;
 import java.util.HashMap;

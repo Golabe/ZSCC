@@ -9,7 +9,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.IHomeworkApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.HomeworkModel;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IHomeworkView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IHomeworkView;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.zspt.app.modulecouresdetails.course_watch.presenter;
 
 import com.zspt.app.library_common.base.mvp.BasePresenter;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IWatchView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IWatchView;
 
 /**
  * Created by yuequan on 2017/10/11.

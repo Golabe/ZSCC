@@ -19,6 +19,7 @@ import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.TabAdapter;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.WatchPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IWatchView;
 import com.zspt.app.modulecouresdetails.course_watch.view.fragment.ChapterFragment;
 import com.zspt.app.modulecouresdetails.course_watch.view.fragment.CommentFragment;
 import com.zspt.app.modulecouresdetails.course_watch.view.fragment.QuestionFragment;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Route(path = AppConstant.MODULE_WATCH)
-public class WatchActivity extends BaseMvpActivity implements IWatchView,View.OnClickListener, MoreBottomDialog.OnItemClickListener {
+public class WatchActivity extends BaseMvpActivity implements ChapterFragment.FragmentInteraction,IWatchView,View.OnClickListener, MoreBottomDialog.OnItemClickListener {
 
     private FloatingActionButton mFab;
     private IjkVideoView mIjkVideoView;
@@ -185,4 +186,8 @@ public class WatchActivity extends BaseMvpActivity implements IWatchView,View.On
         }
     }
 
+    @Override
+    public void process(String str) {
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show();
+    }
 }

@@ -12,6 +12,7 @@ import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.adapter.CommentAdapter;
 import com.zspt.app.modulecouresdetails.course_watch.model.CommentModel;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.CommentPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.fragment.interfaces.ICommentView;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -5,15 +5,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.alibaba.android.arouter.utils.TextUtils;
 import com.zspt.app.library_common.base.activity.BaseMvpActivity;
 import com.zspt.app.library_common.util.hint.ToastUtil;
 import com.zspt.app.modulecouresdetails.R;
 import com.zspt.app.modulecouresdetails.course_watch.presenter.QuestionActivityPresenter;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IQuestionActivityView;
 
 
 public class QuestionActivity extends BaseMvpActivity implements IQuestionActivityView {

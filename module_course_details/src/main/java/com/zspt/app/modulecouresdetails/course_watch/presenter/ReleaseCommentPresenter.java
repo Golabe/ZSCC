@@ -7,7 +7,7 @@ import com.zspt.app.library_common.rx.RxManager;
 import com.zspt.app.library_common.rx.RxSubscriber;
 import com.zspt.app.modulecouresdetails.api.IReleaseCommentApi;
 import com.zspt.app.modulecouresdetails.course_watch.model.ReleaseCommentModel;
-import com.zspt.app.modulecouresdetails.course_watch.view.activity.IReleaseCommentView;
+import com.zspt.app.modulecouresdetails.course_watch.view.activity.interfaces.IReleaseCommentView;
 
 import java.util.HashMap;
 import java.util.Map;
